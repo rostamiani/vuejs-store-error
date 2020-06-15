@@ -1,10 +1,9 @@
 import Vue from 'vue'
-import App from './App.vue'
 import store from './store'
 
 Vue.config.productionTip = false
 
-new Vue({
-  store,
-  render: h => h(App)
-}).$mount('#app')
+import vueCustomElement from 'vue-custom-element'
+import AppParent from './components/Parent.vue'
+Vue.use(vueCustomElement)
+Vue.customElement('app-parent', new AppParent({ store }).$options)
