@@ -1,6 +1,7 @@
 <template>
   <div class="parent">
     <h3>This is the parent component</h3>
+    look at the Console...
     <app-child></app-child>
     <app-child></app-child>
   </div>
